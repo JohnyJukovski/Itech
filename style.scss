@@ -1,14 +1,22 @@
 @use './styles/global.scss';
  @use './reset.css';
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
 html{
-    background-color: gray;
+    background-color: var(--white-color);
     color : var(--black-color);
 
 }
 
 a{
     text-decoration: none;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+
 }
 
 li{
@@ -20,6 +28,14 @@ header,main, footer{
     align-items: center;
 }
 
+
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+}
 
 .container{
    width: 100%;
@@ -40,4 +56,12 @@ header,main, footer{
 @media (min-width:1400px){
     width: 1320;
 }
+}
+
+.navigation ul{
+    display: flex;
+
+    gap: var(--gap);
+    text-transform: uppercase;
+    font: var(--smaller-font);
 }
