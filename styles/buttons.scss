@@ -1,14 +1,29 @@
 .button { 
+--size:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+padding: 0 var(--gap);
+height: var(--size);
+
    border: 1px solid var(--grey-color);
    transition: var(--transition);
-   border-radius: 10px;
+   border-radius: var(--size);
    cursor: pointer;
 
    &:hover, &:active, &:focus{
     border-color: var(--violett-color);
+    background-color: var(--violett-color);
+    color: var(--white-color);
+    
+    svg{
+      fill:var(--white-color);
+    }
    }
 
-   &--round{
+   &_round{
+      padding: 0;
       --size:40px;
       height: var(--size);
       width: var(--size);

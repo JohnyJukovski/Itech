@@ -30,12 +30,7 @@ header,main, footer{
 
 
 
-header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--gap);
-}
+
 
 .container{
    width: 100%;
@@ -58,10 +53,3 @@ header .container{
 }
 }
 
-.navigation ul{
-    display: flex;
-
-    gap: var(--gap);
-    text-transform: uppercase;
-    font: var(--smaller-font);
-}
