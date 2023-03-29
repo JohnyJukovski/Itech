@@ -1,24 +1,39 @@
-
+.top-banner{
+    width: 100%;
+    height: 75px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: -30px;
+    background-image: url(/assets/images/top_nav_background.png);
+}
 
 header{
-    .container{
+
+    .header__container{
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: var(--gap);
+    
+
     }
     .header__buttons{
-            display: flex;  
+        width: 215px;
+        display: flex;  
             gap: var(--gap);
 
     }
-    .navigation ul{
-        display: flex;
-    
-        gap: var(--gap);
-        text-transform: uppercase;
-        font: var(--smaller-font);
-    }
+}
+.navigation ul{
+    display: flex;
+    gap: calc(var(--gap)*2);
+    text-transform: uppercase;
+    font: var(--smaller-font);
+}
+.logo{
+    width: 150px;
+    height: 30px;
 }
 
 

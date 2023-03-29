@@ -8,9 +8,16 @@
 :root{
     //font
   --smaller-font: 700 12px 'Inter' , sans-serif;
- 
+--font:400 14px 'Inter', sans-serif; 
+--biggest-font:700 40px 'Inter', sans-serif; 
 //spacers
 --gap:20px;
 
     --transition:0.3s;
+}
+
+.text{
+    &_biggest{
+        font: var(--biggest-font);
+    }
 }
