@@ -1,6 +1,18 @@
 footer{
-    
-
+    --wave-size:269px;
+.footer__wave{
+    position: absolute;
+    top: 187px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-image: url('./../assets/images/footer_wave.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    height: var(--wave-size);
+}
     .footer__container,
     .footer__top{
         display: flex;
