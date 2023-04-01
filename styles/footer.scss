@@ -1,9 +1,11 @@
+@use "variables" as var;
+
 footer{
     --wave-size:269px;
     width: 100%;
 .footer__wave{
     position: absolute;
-    top:202px;
+    top:222px;
     left: 0;
     right: 0;
     background-image: url('./../assets/images/footer_wave.png');
@@ -36,20 +38,57 @@ footer{
 } 
 .footer__buttons{
     display: flex;  
+    flex-direction: column;
     gap: var(--gap);
+    margin: calc(var(--gap)*2) 0;
+
+    @media (min-width:var.$bigger-mobile) {
+        flex-direction: row;
+    }
     
+}
+
+.footer__button{
+    white-space: nowrap;
 }
 
 }
 .footer__center{
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     gap: var(--gap);
     padding: var(--gap) 0;
     border-bottom: 1px solid var(--grey-color);
+
+    @media (min-width:var.$tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
+
+.footer__navigation ul{
+flex-wrap: wrap;
+
+li{
+    display: flex;
+    width: 80px;
+    align-self: start;
+}
+@media (min-width:var.$tablet) {
+    justify-content: space-around;
+}
+@media (min-width:var.$desktop) {
+    li{
+      width: auto;
+    }
+    
+}
+
+}
+
+
 
 .footer_lang{
    width: 208px; 
