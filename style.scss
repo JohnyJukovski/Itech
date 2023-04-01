@@ -1,15 +1,17 @@
 @use './styles/global.scss';
  @use './reset.css';
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+}
 
 html{
     background-color: var(--white-color);
     color : var(--black-color);
-    box-sizing: border-box;
-    font: var(--font);
-
+    font: var(--font); 
 }
 body{
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -18,13 +20,15 @@ body{
 
 a{
     text-decoration: none;
+    color: var(--black-color);
+    transition: var(--transition);
 }
 
 button{
     background-color: transparent;
     border: none;
     outline: none;
-
+    color: var(--black-color);
 }
 
 li{

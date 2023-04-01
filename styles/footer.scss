@@ -1,17 +1,28 @@
 footer{
     --wave-size:269px;
+    width: 100%;
 .footer__wave{
     position: absolute;
-    top: 187px;
+    top:202px;
     left: 0;
     right: 0;
-    width: 100%;
     background-image: url('./../assets/images/footer_wave.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: -1;
     height: var(--wave-size);
+    animation: wave 2s ease-in-out infinite alternate both;
+ 
+
+    @keyframes wave{
+        0% { 
+            transform: rotate(1deg);
+        }
+        100% { 
+            transform: rotate(-1deg);
+        }
+    }
 }
     .footer__container,
     .footer__top{
@@ -21,6 +32,7 @@ footer{
         gap: var(--gap);
         text-align: center;
         flex-direction: column;
+       
 } 
 .footer__buttons{
     display: flex;  

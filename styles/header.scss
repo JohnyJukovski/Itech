@@ -19,11 +19,55 @@ header{
 
     }
     .header__buttons{
+        position: relative;
         width: 215px;
         display: flex;  
-            gap: var(--gap);
+        align-items: center;
+        gap: var(--gap);
 
     }
+    .header__lang{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        
+        img{
+            padding-right: 10px;
+            height: 30px;
+            width: 40px;
+     }
+    }
+
+    .header__langs{
+        position: absolute;
+        padding: 20px 0;
+        border-radius: 20px;
+        top:40px;
+        right: 20px;
+ 
+        display: flex;
+        background-color: var(--creame-color);
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: center;
+
+        a{ 
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            &:hover{
+                background-color:var(--white-color);
+            }
+        }
+        img{
+            
+            padding-right: 10px;
+            height: 25px;
+            width: 35px;
+        }
+  }
+
 }
 .navigation ul{
     display: flex;
