@@ -29,6 +29,7 @@ button{
     border: none;
     outline: none;
     color: var(--black-color);
+    cursor: pointer;
 }
 
 li{
@@ -52,29 +53,3 @@ footer{
 }
 
 
-
-// .container{
-//    width: 100%;
-
-
-// @media (min-width:576px){
-//     width: 540px;
-// }
-
-// @media (min-width:768px){
-//     width: 720px;
-// }
-
-// @media (min-width:992px) {
-//     width: 960px;
-    
-// }
-
-// @media (min-width:1200px){
-//     width: 1170px;
-// }
-
-// @media (min-width:1400px){
-//     width: 1320px;
-// }
-// }

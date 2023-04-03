@@ -8,6 +8,18 @@
 &:hover, &:active, &:focus{
     color : var(--violett-color);
 } 
+&_small{ 
+    font: var(--samllest-font);
+    text-decoration: underline;
+    color:var(--white-color);
+    white-space: nowrap;
+
+&:hover,
+&:focus,
+&_active{
+    color: var(--blue-color);
+}
+}
 }
 
 .link_active{

@@ -7,17 +7,38 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="top-banner"></div>
+    <div class="top-banner">
+<div class="container top-banner__container">
+<a href="./pages/contact/index.html" class="button_white">Special</a>
+<span class="top-banner__text">
+  <span class="text_emoji">&#128525;</span>
+  <span class="text_purple">Get</span>
+  20% Discount!
+</span>
+<a href="./pages/contact/index.html" class="link_small">Register Now!</a>
+
+</div>
+    </div>
     <header>
       <div class="container header__container">
-        <a href="#">
-          <img src="assets/images/logo.png" alt="logo" class="logo" />
-        </a>
-        <nav class="navigation header__navigation">
-          <ul>
-            <li><a class="link" href="./pages\about\index.html">About</a></li>
-            <li>
-              <a class="link" href="./pages\product\index.html">Product</a>
+        <div class="header__triggers">
+
+          <a href="#">
+            <img src="assets/images/logo.png" alt="logo" class="logo" />
+          </a>
+          <button class="header__mobile-trigger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="header__menu">
+
+          <nav class="navigation header__navigation">
+            <ul>
+              <li><a class="link" href="./pages\about\index.html">About</a></li>
+              <li>
+                <a class="link" href="./pages\product\index.html">Product</a>
             </li>
             <li>
               <a class="link" href="./pages\service\index.html">Service</a>
@@ -40,6 +61,7 @@
             </li>
           </ul>
         </nav>
+      
         <div class="header__buttons">
           <button class="button button_round">
             <svg
@@ -70,6 +92,7 @@
             <a href="#">  
               <img src="./assets/images/ukraine.png" alt="">&nbsp;Ukraine
             </a>
+          </div>
           </div>
       </div>
     </div>

@@ -1,31 +1,69 @@
 @use "variables" as var;
+// @use "styles/mixins" as mixins;
 
 .top-banner{
     width: 100%;
-    height: 75px;
+   min-height: 45px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: -30px;
     background-image: url(/assets/images/top_nav_background.png);
+padding-bottom: 30px;
+font:var(--smallest-font);
+color: var(--white-color);
+
+&__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    gap: var(--gap);
+    text-align: center;
+}
+
+&__text{
+display: flex;
+flex-wrap: wrap;
+column-gap: 5px;
+align-items: center;
+justify-content: center;
+}
+
 }
 
 header{
 
-    .header__navigation{
-        display: none;
+ ul{
+   column-gap: var(--gap);
+    flex-wrap: wrap;
+ }
+ li{
+    width: 80px;
+    display: flex;
+    justify-content: flex-start;
+ }
 
         @media (min-width:var.$tablet) {
-            display: flex;
+           position: relative;
+           ul{
+            flex-wrap: nowrap;
+           }
+           li{
+            width: inherit;
+           }
         }
     }
 
     .header__container{
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
         gap: var(--gap);
-    
+
+        @media (min-width:var.$tablet) {
+            flex-direction: row;
+        }
 
     }
     .header__buttons{
@@ -48,6 +86,53 @@ header{
             width: 40px;
      }
     }
+    .header__triggers{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header__mobile-trigger{
+        transition: var(--transition);
+        svg{
+            width: 35px;
+            height: 35px;
+        }
+        &:hover,
+        &:focus,
+        &:active,
+        &_active{
+            svg{
+                fill:var(--violett-color);
+            }
+        }
+        
+    }
+    .header__menu{
+        flex: 1;
+        align-self: center;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: calc((--gap)*2) var(--gap);
+        border-bottom: 2px solid var(--grey-color);
+    
+    @media (min-width:var.$tablet) {
+        border: none;
+        align-items: center;
+        padding: 0;
+        gap: var(--gap);
+    }
+
+    }
+
+    .header__mobile-trigger{
+        @media (min-width:var.$tablet) {
+            display: none;
+        }
+    }
+
+
+
 
     .header__langs{
         position: absolute;
@@ -122,14 +207,19 @@ nav{
     &_four{
         top:calc(var(--top)*4);
     } }
-}
+
 @media(min-width: var.$desktop){
     position: static;
     width: auto;
     height: auto;
-}
-}
+ }}
+
+
+
+
+
 .navigation ul{
+    margin-left: 10px;
     display: flex;
     column-gap: calc(var(--gap)*2);
     row-gap:calc(var(--gap)/2);
