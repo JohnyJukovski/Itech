@@ -1,5 +1,19 @@
 @use './../../styles/global';
 @use './../../style';
-body {
-    background-color: blue;
-}
+@use './../../styles/header.scss';
+
+
+
+// footer .footer__wave {
+//     position: absolute;
+//     top: 222px;
+//     left: 0;
+//     right: 0;
+//     background-image: url(..//..//assets/images/footer_wave.png);
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+//     z-index: -1;
+//     height: var(--wave-size);
+//     animation: wave 2s ease-in-out infinite alternate both;
+// }

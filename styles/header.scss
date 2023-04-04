@@ -8,7 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: -30px;
-    background-image: url(/assets/images/top_nav_background.png);
+    background-image: url("/..//assets/images/top_nav_background.png");
 padding-bottom: 30px;
 font:var(--smallest-font);
 color: var(--white-color);
@@ -148,8 +148,9 @@ header{
         text-align: center;
 
         a{ 
-           display: block;
-           width: calc(100% - 60%);
+          display: flex;
+          align-items: center;
+          text-align: center;
            padding: 5px 30px;
             &:hover{
                 background-color:var(--white-color);
