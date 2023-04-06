@@ -5,7 +5,7 @@ footer{
     width: 100%;
 .footer__wave{
     position: absolute;
-    top:580px;
+    top: 640px;;
     left: 0;
     right: 0;
     background-image: url("/..//assets/images/footer_wave.png");
@@ -16,15 +16,18 @@ footer{
     height: var(--wave-size);
     animation: wave 2s ease-in-out infinite alternate both;
  
+    @media (max-width:var.$bigger-tablet) {
+        top: 813px;
+    }
     @media (max-width:var.$tablet) {
-        top: 250px;
+        top: 640px;
     }
 
     @media (max-width:var.$bigger-mobile) {
-        top: 313px;
+        top: 663px;
     }
-    @media (max-width:var.$mini-mobile){
-    top: 438px;
+    @media (max-width:var.$mono-mobile){
+    top: 754px;
 }
 
     @keyframes wave{
