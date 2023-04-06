@@ -3,6 +3,7 @@
 @use 'links';
 @use 'header';
 @use 'footer';
+@use '../pages/initial/index.scss';
 
 html{
     box-sizing: border-box;

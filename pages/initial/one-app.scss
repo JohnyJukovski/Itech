@@ -1,0 +1,42 @@
+@use "../../styles/variables.scss" as var;
+
+.one-app{
+  $double-gap:calc(var(--gap)*2);
+  margin-top: $double-gap;
+  // @media (max-width:var.$tablet) {
+  //  margin-top: 110px; 
+  // }
+
+    &__container{
+     display: flex;
+    }
+
+    &__right,
+    &__left{
+      flex:1;
+    }
+    
+    &__left{
+      display: flex;
+      flex-direction: column;
+      gap: $double-gap;
+      
+      p{
+        align-self: flex-start;
+      }
+    }
+    
+    &__buttons{
+      display: flex;
+      gap: $double-gap;
+    }
+
+    br{
+      display: none;
+    }
+    @media (min-width:var.$bigger-tablet) {
+      br{
+        display: block;
+      }
+   }
+  }

@@ -5,7 +5,7 @@ footer{
     width: 100%;
 .footer__wave{
     position: absolute;
-    top:222px;
+    top:394px;
     left: 0;
     right: 0;
     background-image: url("/..//assets/images/footer_wave.png");
@@ -16,6 +16,16 @@ footer{
     height: var(--wave-size);
     animation: wave 2s ease-in-out infinite alternate both;
  
+    @media (max-width:var.$tablet) {
+        top: 250px;
+    }
+
+    @media (max-width:var.$bigger-mobile) {
+        top: 313px;
+    }
+    @media (max-width:var.$mini-mobile){
+    top: 438px;
+}
 
     @keyframes wave{
         0% { 
@@ -34,6 +44,7 @@ footer{
         gap: var(--gap);
         text-align: center;
         flex-direction: column;
+      
        
 } 
 .footer__buttons{
@@ -103,7 +114,7 @@ footer{
 }
 
 .footer__top{
-    margin-bottom: 169px;
+    padding-top: 50px;
     @media (max-width:var.$tablet) {
         margin-bottom: 42px;
     }

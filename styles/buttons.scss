@@ -46,7 +46,7 @@
          padding: 0 calc(var(-gap)*1.5);
       }
    }
-   @media (min-width:var.$tablet) {
+   @media (min-width:var.$bigger-tablet) {
       --size: 40px;
    }
 
