@@ -4,6 +4,8 @@
 @use 'header';
 @use 'footer';
 @use '../pages/initial/index.scss';
+@use 'features';
+@use '../pages/initial/partners.scss';
 
 html{
     box-sizing: border-box;

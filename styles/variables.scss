@@ -11,6 +11,7 @@ $bigger-desktop: 1400px;
   --smaller-font: 700 12px 'Inter' , sans-serif;
 --font:400 14px 'Inter', sans-serif; 
 --biggest-font:700 24px 'Inter', sans-serif; 
+--bigger-font: 700 20px "Inter" , sans-serif;
 //spacers
 --gap:10px;
 
@@ -21,6 +22,7 @@ $bigger-desktop: 1400px;
     --smaller-font: 700 12px 'Inter' , sans-serif;
     --font:400 15px 'Inter', sans-serif; 
     --biggest-font:700 52px 'Inter', sans-serif;
+    --bigger-font: 700 18px "Inter" , sans-serif;
     --smallest-font:400 11px "Inter", sans-serif; 
 }
     @media (min-width: $bigger-mobile) {
@@ -33,8 +35,11 @@ $bigger-desktop: 1400px;
     &_biggest{
         font: var(--biggest-font);
     }
+    &__bigger {
+        font: var(--bigger-font);
+      }
     &_gradient{
-        background-color: text;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color:transparent;
         background-image: linear-gradient(
@@ -52,10 +57,19 @@ $bigger-desktop: 1400px;
     &_emoji{
         font-size: 20px;
     }
-    &_with-bg{
+    &_with-bg {
         background-color: #f7f4ff;
         color: var(--violett-color);
         font-size: 12px;
         padding: 5px 10px;
+        border-radius: 3px;
+    
+
+        &_white{
+            background-color: var(--white-color);
+        }
+    }
+    &_violett{
+        color: var(--violett-color);
     }
 }
