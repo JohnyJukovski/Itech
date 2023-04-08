@@ -2,22 +2,23 @@
 
 .partners{
     $double-gap: calc(var(--gap) * 2);
-    height: 600px;
     width: 100%;
     position: relative;
-    
+    z-index: 0;
+    background-color: var(--creame-color);
 
     &__wave{
         height: 269px;
-        z-index: 0;
-        top: 344px;
+       z-index: -1;
+        top: 768px;
+        background-color: var(--white-color);
     
         @media (min-width:var.$bigger-mobile) {
-            top: 404px;
+            top: 1282px;
         }
 
     @media (min-width:var.$bigger-tablet) {
-            top: 344px;
+            top: 768px;
         }
     }
 
@@ -28,11 +29,11 @@
         margin: 0 auto;
         padding-bottom: $double-gap;
         border-bottom: 2px solid var(--grey-color);
-        background-color: var(--creame-color);
+        
     }
 
     &__heading{
-        z-index: 70;
+        z-index: var(--bigger-than-nice-index);
         margin-bottom: $double-gap;
     }
 
@@ -40,7 +41,7 @@
         margin: $double-gap 0;
         width: 100%;
         display: flex;
-        z-index: 70;
+        z-index:  var(--bigger-than-nice-index);
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;

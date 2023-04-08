@@ -52,4 +52,12 @@ footer{
     background-color: var(--creame-color);
 }
 
+@keyframes rotate-center {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 

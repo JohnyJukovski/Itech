@@ -82,7 +82,8 @@ footer{
 }
 
 .footer__top{
-    padding-top: 50px;
+    padding-top: 70px;
+    z-index: 0;
     @media (max-width:var.$tablet) {
         margin-bottom: 42px;
     }

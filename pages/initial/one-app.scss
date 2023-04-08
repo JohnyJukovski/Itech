@@ -21,14 +21,14 @@
     
     animation: rotate-center 100s linear infinite both;
   
-    @keyframes rotate-center {
-      0%{ 
-        transform: rotate(0);
-    }
-    100%{
-      transform: rotate(360deg);
-    }
-    }
+    // @keyframes rotate-center {
+    //   0%{ 
+    //     transform: rotate(0);
+    // }
+    // 100%{
+    //   transform: rotate(360deg);
+    // }
+    // }
   }
 
     &__container{
