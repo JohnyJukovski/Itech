@@ -7,20 +7,20 @@
     z-index: 0;
     background-color: var(--creame-color);
 
-    &__wave{
-        height: 269px;
-       z-index: -1;
-        top: 768px;
-        background-color: var(--white-color);
+    // &__wave{
+    //     height: 269px;
+    //    z-index: -1;
+    //     top: 900px;
+    //     background-color: var(--white-color);
     
-        @media (min-width:var.$bigger-mobile) {
-            top: 1282px;
-        }
+    //     @media (min-width:var.$bigger-mobile) {
+    //         top: 1400px;
+    //     }
 
-    @media (min-width:var.$bigger-tablet) {
-            top: 768px;
-        }
-    }
+    // @media (min-width:var.$bigger-tablet) {
+    //         top: 900px;
+    //     }
+    // }
 
     &__container{
         display: flex;
