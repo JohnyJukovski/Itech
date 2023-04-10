@@ -1,20 +1,26 @@
 @use "../../styles/variables.scss" as var;
+@use '../initial/mixins.scss' as localMixins; 
+@use "../../styles/mixins.scss" as mixins;
 
 .notero{ 
     $double-gap: calc(var(--gap) * 2);
+
     display: flex;
     width: 100%;
     position: relative;
-   
-    
+   z-index: 0;
     justify-content: center;
-    z-index: 0;
-    padding: 50px 0;
+    padding-top: 50px;
+
+    @media (min-width: var.$desktop) {
+        padding-top: 100px;
+      }
 
     &__container{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: var(--gap);
+        width: 100%;
         
         @media (min-width:var.$desktop) {
             flex-direction: row;
@@ -52,39 +58,22 @@
         right: 50%;
         left: 0;
         bottom: 0;
-        background-image: url(../../assets/images/initial/notero-web.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include mixins.background-image(
+            $image: "../../assets/images/initial/notero-web.png"
+          );
     }
 
     &__left{
-        height: 412px;
-        position: relative;
-        background-image: url(../../assets/images/initial/notero-ipad.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    
+        
+        @include localMixins.half-container-image-two('../../assets/images/initial/notero-ipad.png');
+        
     }
 
 
     &__animation{
-        position: absolute;
-        top: -15%;
-        right: -15%;
-        left: -15%;
-        bottom: -15%;
-        height: 412px;
+        @include localMixins.rotate-center(15%,$image:"../../assets/images/initial/notero-bubbles.png");
         
-        background-image: url(../../assets/images/initial/notero-bubbles.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: -1;
-        overflow: clip;
-        
-        animation: rotate-center 100s linear infinite both;
+       
     }
 
     .text_notero{
@@ -97,24 +86,30 @@
             }
         }
     }
-    &__benefits{
-        display: flex;
-        align-items: center;
-        gap: 25px;
-    }
-    &__benefit{
-        display: flex;
-        align-items: center;
-        padding: 8px;
-        justify-content: center;
-        background-color: var(--creame-color);
-        border-radius: 50%;
-    }
-
+    // &__benefits{
+    //     display: flex;
+    //     align-items: center;
+    //     gap: 25px;
+    // }
+    
     svg{
         fill: var(--violett-color);
     }
     // p{
-    //     align-self: center;
-    // }
-}
+        //     align-self: center;
+        // }
+    }
+    .notero__benefit{
+        display: flex;
+        align-items: center;
+        padding: 10px 0 ;
+        gap: 10px;
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            background-color: var(--creame-color);
+            border-radius: 50%;
+          }
+    }

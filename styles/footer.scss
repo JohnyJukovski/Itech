@@ -1,5 +1,5 @@
 @use "variables" as var;
-
+@use "styles/mixins" as mixins;
 footer{
     --wave-size:269px;
     width: 100%;
@@ -94,31 +94,35 @@ footer{
 .footer__container{
     margin-bottom: 20px;
 }
-.footer__wave{
+ .footer__wave{
     position: absolute;
-    top: 640px;;
-    left: 0;
-    right: 0;
-    background-image: url("/..//assets/images/footer_wave.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    top: 2140px;;
+    left: -3px;
+    right: -3px;
+    @include mixins.background-image("assets/images/footer_wave.png");
     z-index: -1;
     height: var(--wave-size);
     animation: wave 2s ease-in-out infinite alternate both;
  
-    @media (max-width:var.$bigger-tablet) {
-        top: 813px;
+    @media (max-width:var.$desktop) {
+        top: 2662px;
     }
+    @media (max-width:var.$bigger-tablet) {
+        top: 3216px;
+    } 
+
     @media (max-width:var.$tablet) {
-        top: 640px;
+        top: 2890px;
     }
 
     @media (max-width:var.$bigger-mobile) {
-        top: 663px;
+        top: 2865px;
     }
-    @media (max-width:var.$mono-mobile){
-    top: 754px;
+    @media (max-width:var.$mini-mobile){
+    top: 2948px;
+}
+@media (max-width:var.$mono-mobile){
+    top: 3142px;
 }
 
     @keyframes wave{

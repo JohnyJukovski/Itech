@@ -1,5 +1,5 @@
 @use './styles/global.scss';
- @use './reset.css';
+//  @use './reset.css';
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 *{
     box-sizing: border-box;
@@ -15,8 +15,9 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-   
+    margin: 0;
 }
+
 
 a{
     text-decoration: none;
@@ -39,6 +40,7 @@ header,main, footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 header{
     padding:  var(--gap) 0 ;
@@ -48,7 +50,7 @@ header{
 }
 
 footer{
-    padding-top: 100px;
+    // padding-top: 100px;
     background-color: var(--creame-color);
 }
 
@@ -60,4 +62,6 @@ footer{
         transform: rotate(360deg);
     }
 }
+
+
 

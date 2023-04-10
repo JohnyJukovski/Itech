@@ -1,0 +1,44 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixins;
+
+@mixin rotate-center($space: 0 , $image ){
+    position: absolute;
+    top: $space;
+    right: $space;
+    left: $space;
+    bottom: $space;
+    width: 100%;
+
+   @include mixins.background-image($image);
+    z-index: -1;
+    overflow: clip;
+    
+    animation: rotate-center 100s linear infinite both;
+}
+
+@mixin half-container-image($image){ 
+    height: 390px;
+    @include mixins.background-image($image: $image, $size:contain);
+    background-image: url($image);
+    @media (min-width:var.$bigger-tablet) {
+     height: 500px;
+      }
+      @media (min-width:var.$tablet) {
+        height: 660px;
+         }}
+
+ @mixin half-container-image-two($image){
+    height: 412px;
+    position: relative;
+    background-image: url($image);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+    @media (min-width:var.$bigger-mobile) {
+        height: 522px;
+    }
+    @media (min-width:var.$tablet) {
+        height: 682px;
+    }}

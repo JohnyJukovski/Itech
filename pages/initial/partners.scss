@@ -6,21 +6,25 @@
     position: relative;
     z-index: 0;
     background-color: var(--creame-color);
+    margin-bottom: 0;
 
-    // &__wave{
-    //     height: 269px;
-    //    z-index: -1;
-    //     top: 900px;
-    //     background-color: var(--white-color);
-    
-    //     @media (min-width:var.$bigger-mobile) {
-    //         top: 1400px;
-    //     }
+    &__wave{
+        height: 269px;
+        z-index: -1;
+        top: -200px;
 
-    // @media (min-width:var.$bigger-tablet) {
-    //         top: 900px;
-    //     }
-    // }
+        
+        @media (max-width:var.$desktop) {
+            top: -200px;
+        }
+        @media (max-width:var.$bigger-tablet) {
+                top: -202px;
+            }
+        @media (max-width:var.$bigger-mobile) {
+            top: -203px;
+        }
+
+    }
 
     &__container{
         display: flex;
