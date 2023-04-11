@@ -6,6 +6,7 @@
   $double-gap:calc(var(--gap)*2);
   margin-top: $double-gap;
  position: relative;
+ padding-bottom: 100px;
 
   &__animation{
     @include localMixins.rotate-center($image:"../../assets/images/initial/one-app-bubble.png");

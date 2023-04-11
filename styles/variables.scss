@@ -82,4 +82,12 @@ $bigger-desktop: 1400px;
     &_violett{
         color: var(--violett-color);
     }
+
+    &_smallest{
+        font: var(--smallest-font);
+    }
+    
+    &_smaller{
+        font: var(--smaller-font);
+    }
 }

@@ -11,6 +11,7 @@
    z-index: 0;
     justify-content: center;
     padding-top: 50px;
+  
 
     @media (min-width: var.$desktop) {
         padding-top: 100px;
@@ -46,10 +47,8 @@
         }
     }
 
-    .text_notero{
-       
+    &__description{
             line-height: 30px;
-         
     }
     &::before{
         content:"";
@@ -59,7 +58,7 @@
         left: 0;
         bottom: 0;
         @include mixins.background-image(
-            $image: "../../assets/images/initial/notero-web.png"
+            $image: "../../assets/images/initial/notero-web.png",
           );
     }
 
@@ -76,7 +75,7 @@
        
     }
 
-    .text_notero{
+    .notero__description{
         line-height: 30px;
         br{
             display: none;
