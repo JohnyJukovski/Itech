@@ -7,11 +7,11 @@
     right: $space;
     left: $space;
     bottom: $space;
-    width: 100%;
-
+    max-width: 1920px;
+    
    @include mixins.background-image($image);
     z-index: -1;
-    overflow: clip;
+   
     
     animation: rotate-center 100s linear infinite both;
 }

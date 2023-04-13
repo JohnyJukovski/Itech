@@ -106,4 +106,46 @@
    }
 }
 
+.button-dropdown{ 
+   width: 300px;
+   padding: var(--gap);
+   border-radius: 30px;
+
+   @media (min-width:var.$bigger-mobile) {
+      width: 360px;
+   }
+   @media (min-width:var.$bigger-tablet) {
+      width: 469px;
+   }
+   
+   &__top{
+      display: flex;
+      gap: var(--gap);
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__bottom{
+      display: none;
+   }
+   &_active{
+      background-color: var(--creame-color);
+      color: var(--violett-color);
+
+      .button-dropdown__bottom{
+         display: block;
+         margin-top: var(--gap);
+         text-align: left;
+         color: var(--black-color);
+      }
+
+      svg{
+         transform: scaleY(-1);
+         fill: var(--violett-color);
+      }
+      
+   }
+
+
+}
+
 

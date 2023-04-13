@@ -1,8 +1,9 @@
 @use "variables" as var;
-@use "styles/mixins" as mixins;
+@use "../styles/mixins.scss" as mixins;
 footer{
     --wave-size:269px;
     width: 100%;
+    overflow:hidden ;
 
     .footer__container,
     .footer__top{
@@ -136,6 +137,7 @@ footer{
 //     }
 // }
 .footer__wave {
+    width: 100%;
     position: absolute;
     top: -169px;
     left: -3px;

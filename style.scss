@@ -1,9 +1,11 @@
 @use './styles/global.scss';
-//  @use './reset.css';
+@use './reset.css';
  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-*{
+ *, *::before, *::after {
     box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+  }
 
 html{
     background-color: var(--white-color);
@@ -13,8 +15,10 @@ html{
 body{
     overflow-x: hidden;
     display: flex;
+    padding: 0;
     flex-direction: column;
     min-height: 100vh;
+    width: 100%;
     margin: 0;
 }
 
@@ -23,6 +27,9 @@ a{
     text-decoration: none;
     color: var(--black-color);
     transition: var(--transition);
+}
+img{
+    z-index: 80;
 }
 
 button{
