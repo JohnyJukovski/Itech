@@ -1,78 +1,71 @@
-@use '../styles/variables.scss' as var;
-@use "../styles/mixins.scss" as mixins;
+@use "styles/variables" as var;
+@use "styles/mixins" as mixins;
 
-.features{
-    $double-gap: calc(var(--gap)*2);
+.features {
+  $double-gap: calc(var(--gap) * 2);
 
+  width: 100%;
+  position: relative;
+  background-color: var(--creame-color);
+  padding: $double-gap 0;
+  overflow: hidden;
+
+  &__circle {
+    position: absolute;
+    @include mixins.background-image(
+      "assets/images/initial/features_circle.png");
+    top: 25%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 50%;
+    margin: 0 auto;
+    z-index: var(--almost-nice-index);
+
+    animation: rotate-center 100s linear infinite both;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $double-gap;
+    margin: $double-gap auto;
+    z-index: var(--nice-index);
+  }
+
+  &__items {
     width: 100%;
-    position: relative;
-    overflow:hidden ;
-    background-color: var(--creame-color);
-    padding: $double-gap 0;
-    
-    &__container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: $double-gap;
-        margin: $double-gap auto;
-        z-index: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: $double-gap;
+
+    @media (min-width: var.$bigger-tablet) {
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    @media (min-width: var.$bigger-tablet) {
+      display: flex;
+      flex-direction: column;
     }
 
-    &__items{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        gap: $double-gap;
-
-        @media (min-width:var.$bigger-tablet) {
-            justify-content: space-around;
-            flex-direction: row;
-        }
+    p {
+      width: 140px;
+      padding-top: var(--gap);
+      text-align: center;
     }
+  }
+}
 
-    &__item{
-        @media (min-width:var.$bigger-tablet) {
-            display: flex;
-            flex-direction: column;
-        }
-        p{
-            width: 140px;
-            padding-top: var(--gap);
-            text-align: center;
-        }
-    }
-
-    &__circle{
-        position: absolute;
-        background-image: url('/assets/images/initial/f eatures_circle.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        top: 25%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        max-width: 50%;
-        margin: 0 auto;
-        z-index: var(--almost-nice-index);
-
-        animation: rotate-center 100s linear infinite both;
-    }
-
-    p{
-        // width: auto;
-        // text-align: center;
-    }
-
-    &__wave{
-        position: absolute;
-        bottom: -12px;
-        width: 100%;
-        height: 12px;
-        @include mixins.background-image("assets/images/initial/wave.png");
-        z-index: var(--nice-index); 
-    }
+.features__wave {
+  position: absolute;
+  bottom: -12px;
+  width: 100%;
+  height: 12px;
+  @include mixins.background-image("assets/images/initial/wave.png");
+  z-index: var(--nice-index);
 }

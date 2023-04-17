@@ -1,39 +1,28 @@
 @use "variables" as var;
-@use "../styles/mixins.scss" as mixins;
-footer{
-    --wave-size:269px;
-    width: 100%;
-    overflow:hidden ;
+@use "styles/mixins" as mixins;
 
-    .footer__container,
-    .footer__top{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: var(--gap);
-        text-align: center;
-        flex-direction: column;
-      
-       
-} 
-.footer__buttons{
-    display: flex;  
+footer {
+  position: relative;
+  margin-top: 169px;
+  background-color: var(--creame-color);
+
+  .footer__container {
+    gap: calc(var(--gap) * 2);
+    padding: calc(var(--gap) * 2) 0;
+  }
+
+  .footer__container,
+  .footer__top {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__top {
     gap: var(--gap);
-    margin: calc(var(--gap)*2) 0;
+  }
 
-    @media (min-width:var.$bigger-mobile) {
-        flex-direction: row;
-    }
-    
-}
-
-.footer__button{
-    white-space: nowrap;
-}
-
-}
-.footer__center{
+  .footer__center {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -41,16 +30,15 @@ footer{
     padding: var(--gap) 0;
     border-bottom: 2px solid var(--grey-color);
 
-    @media (min-width:var.$tablet) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    @media (min-width: var.$tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
     }
-}
+  }
 
-.footer__navigation ul {
+  .footer__navigation ul {
     flex-wrap: wrap;
-    margin-left: 15px;
 
     li {
       display: flex;
@@ -69,92 +57,46 @@ footer{
     }
   }
 
+  .footer__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin: calc(var(--gap) * 2) 0;
 
-// .footer_lang{
-//    width: 208px; 
-// }
-.footer__bottom{
-    a{
-        text-decoration: underline;
-    }
-}
-.footer__bottom-text{
-    margin-bottom: 20px;
-}
-
-.footer__top{
-    padding-top: 70px;
-    z-index: 0;
-    @media (max-width:var.$tablet) {
-        margin-bottom: 42px;
-    }
-    @media (max-width:var.$bigger-mobile) {
-        margin-bottom: 0;
-    }
-}
-.footer__container{
-    margin-bottom: 20px;
-}
-//  .footer__wave{
-    
-//     position: absolute;
-//     top: 2649px;;
-//     left: -3px;
-//     right: -3px;
-//     @include mixins.background-image("assets/images/footer_wave.png");
-//     z-index: -1;
-//     height: var(--wave-size);
-//     animation: wave 2s ease-in-out infinite alternate both;
- 
-//     @media (max-width:var.$desktop) {
-//         top: 2662px;
-//     }
-//     @media (max-width:var.$bigger-tablet) {
-//         top: 3216px;
-//     } 
-
-//     @media (max-width:var.$tablet) {
-//         top: 2890px;
-//     }
-
-//     @media (max-width:var.$bigger-mobile) {
-//         top: 2865px;
-//     }
-//     @media (max-width:var.$mini-mobile){
-//     top: 2948px;
-// }
-// @media (max-width:var.$mono-mobile){
-//     top: 3142px;
-// }
-
-//     @keyframes wave{
-//         0% { 
-//             transform: rotate(1deg) scaleX(-1);
-//         }
-//         100% { 
-//             transform: rotate(-1deg) scaleX(-1);
-//         }
-//     }
-// }
-.footer__wave {
-    width: 100%;
-    position: absolute;
-    top: -169px;
-    left: -3px;
-    right: -3px;
-    height: 269px;
-    @include mixins.background-image("assets/images/footer_wave.png");
-    z-index: -1;
-  
-    animation: wave 2s ease-in-out infinite alternate both;
-  
-    @keyframes wave {
-      0% {
-        transform: rotate(1deg) scaleX(-1);
-      }
-  
-      100% {
-        transform: rotate(-1deg) scaleX(-1);
-      }
+    @media (min-width: var.$bigger-mobile) {
+      flex-direction: row;
     }
   }
+
+  .footer__button {
+    white-space: nowrap;
+  }
+
+  .footer__bottom {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer__wave {
+  position: absolute;
+  top: -169px;
+  left: -3px;
+  right: -3px;
+  height: 269px;
+  @include mixins.background-image("assets/images/footer_wave.png");
+  z-index: -1;
+
+  animation: wave 2s ease-in-out infinite alternate both;
+
+  @keyframes wave {
+    0% {
+      transform: rotate(1deg) scaleX(-1);
+    }
+
+    100% {
+      transform: rotate(-1deg) scaleX(-1);
+    }
+  }
+}

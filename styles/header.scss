@@ -5,6 +5,10 @@
     width: 100%;
    min-height: 45px;
    @include mixins.background-image("assets/images/top_nav_background.png");
+    background-image: url("/assets/images/top_nav_background.png"); //4pages
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
     margin-bottom: -30px;
 padding-bottom: 30px;
 font:var(--smallest-font);
