@@ -3,8 +3,7 @@
 
 footer {
   position: relative;
-  margin-top: 169px;
-  background-color: var(--creame-color);
+ 
 
   .footer__container {
     gap: calc(var(--gap) * 2);
@@ -16,6 +15,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
   }
 
   .footer__top {
@@ -82,6 +82,7 @@ footer {
 .footer__wave {
   position: absolute;
   top: -169px;
+  background-color: var(--white-color);
   left: -3px;
   right: -3px;
   height: 269px;

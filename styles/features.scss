@@ -8,7 +8,7 @@
   position: relative;
   background-color: var(--creame-color);
   padding: $double-gap 0;
-  overflow: hidden;
+  // overflow: hidden;
 
   &__circle {
     position: absolute;
@@ -60,12 +60,11 @@
     }
   }
 }
-
-.features__wave {
-  position: absolute;
-  bottom: -12px;
-  width: 100%;
-  height: 12px;
-  @include mixins.background-image("assets/images/initial/wave.png");
-  z-index: var(--nice-index);
-}
+  .features__wave {
+    position: absolute;
+    bottom: -12px;
+    width: 100%;
+    height: 12px;
+    @include mixins.background-image("assets/images/initial/wave.png");
+    z-index: var(--nice-index);
+  }

@@ -23,9 +23,11 @@
         flex-direction: column-reverse;
         gap: var(--gap);
         width: 100%;
+        padding-left: 60px;
         
         @media (min-width:var.$desktop) {
             flex-direction: row;
+            padding-left: 90px;
         }
     }
     &__left,

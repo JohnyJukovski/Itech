@@ -6,7 +6,6 @@
     position: relative;
     width: 100%;
     margin-top: var(--gap);
-    margin-bottom: 200px;
     @include mixins.background-image("../../assets/images/initial/integration-background.png");
 
     &__container{
