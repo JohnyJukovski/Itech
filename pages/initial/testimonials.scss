@@ -33,6 +33,7 @@
 
     &__right{
         position: relative;
+       
 
         &::before{
             content: "";
@@ -63,15 +64,47 @@
     &__button{
         display: flex;
         gap: var(--gap);
+        flex-direction: column;
+        @media (min-width:var.$desktop){
+            flex-direction: row;
+        }
     }
 
     &__cards {
         display: flex;
         flex-direction: column;
         gap: var(--gap);
+        margin-top: 50px;
+        
     
         .card:nth-child(2) {
           align-self: flex-end;
+        }
+      }
+
+      &__icons{
+        display: flex;
+        gap: 30px;
+
+        @media (min-width:var.$bigger-tablet) {
+            gap: $double-gap;
+        }
+
+        &__left,
+        &__right{
+            width: 130px;
+        }
+
+        &__left{
+            border-right: 1px solid var(--grey-color);
+        }
+        img,
+        p{
+            margin-bottom: 5px;
+        }
+
+        img{
+            height: 60px;
         }
       }
 }

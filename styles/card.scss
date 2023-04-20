@@ -22,14 +22,20 @@
       }
 
 
-      svg {
-        fill: var(--yellow-color);
-      }
+     
 
       &__right {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         gap: 5px;
+
+        
+      }
+
+      &__stars{
+        svg {
+          fill: var(--yellow-color);
+        }
       }
 }
