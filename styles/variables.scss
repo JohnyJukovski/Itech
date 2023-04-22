@@ -14,7 +14,7 @@ $bigger-desktop: 1400px;
 --bigger-font: 700 20px "Inter" , sans-serif;
 //spacers
     --gap:10px;
-
+    --double-gap: calc(var(--gap) * 2);
     --transition:0.3s;
 
     //z-indexes

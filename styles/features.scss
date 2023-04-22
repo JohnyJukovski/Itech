@@ -2,13 +2,12 @@
 @use "styles/mixins" as mixins;
 
 .features {
-  $double-gap: calc(var(--gap) * 2);
 
   width: 100%;
   position: relative;
   background-color: var(--creame-color);
-  padding: $double-gap 0;
-  // overflow: hidden;
+  padding: var(--double-gap) 0;
+  
 
   &__circle {
     position: absolute;
@@ -29,8 +28,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $double-gap;
-    margin: $double-gap auto;
+    gap: var(--double-gap);
+    margin:var(--double-gap) auto;
     z-index: var(--nice-index);
   }
 
@@ -39,7 +38,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: $double-gap;
+    gap: var(--double-gap);
 
     @media (min-width: var.$bigger-tablet) {
       justify-content: space-around;

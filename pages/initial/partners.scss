@@ -1,7 +1,6 @@
 @use 'styles/variables' as var;
 
 .partners{
-    $double-gap: calc(var(--gap) * 2);
     width: 101%;
     height: 100%;
     position: relative;
@@ -9,24 +8,6 @@
     background-color: var(--creame-color);
     margin-bottom: 0;
 
-    // &__wave{
-        
-    //     height: 269px;
-    //     z-index: -1;
-    //     top: -172px;
-
-        
-    //     @media (max-width:var.$desktop) {
-    //         top: -200px;
-    //     }
-    //     @media (max-width:var.$bigger-tablet) {
-    //             top: -202px;
-    //         }
-    //     @media (max-width:var.$bigger-mobile) {
-    //         top: -203px;
-    //     }
-
-    // }
     &__wave {
         top: -200px;
     
@@ -44,18 +25,18 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
-        padding-bottom: $double-gap;
+        padding-bottom:var(--double-gap);;
         border-bottom: 2px solid var(--grey-color);
         
     }
 
     &__heading{
         z-index: var(--bigger-than-nice-index);
-        margin-bottom: $double-gap;
+        margin-bottom:var(--double-gap);;
     }
 
     &__links{
-        margin: $double-gap 0;
+        margin:var(--double-gap) 0;
         width: 100%;
         display: flex;
         z-index:  var(--bigger-than-nice-index);

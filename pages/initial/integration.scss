@@ -11,6 +11,7 @@
     &__container{
         display: flex;
         flex-direction: column;
+        padding-left: 20px;
         align-items: center;
         gap: var(--gap);
         margin: 0 auto;
@@ -49,10 +50,12 @@
             display: none;
         }
     }
-    .text_biggest{
+    .text_biggest,
+    .focus__description{
         text-align: center;
     }
     .features__wave{
         transform: scale(-1);
     }
+    
 }

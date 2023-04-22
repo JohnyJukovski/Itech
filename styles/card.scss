@@ -2,10 +2,9 @@
 
 
 .card{
-    $double-gap:calc(var(--gap)*2);
 
     display: flex;
-    gap: $double-gap; 
+    gap: var(--double-gap);
     padding: var(--gap);
     width: 260px;
     height: 100px;
@@ -21,7 +20,13 @@
         height: 134px;
       }
 
-
+      &__left {
+        display: none;
+    
+        @media (min-width: var.$bigger-mobile) {
+          display: block;
+        }
+      }
      
 
       &__right {

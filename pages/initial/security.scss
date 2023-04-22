@@ -3,19 +3,19 @@
 @use "../../styles/mixins.scss" as mixins;
 
 .security{
-    $double-gap:calc(var(--gap)*2);
 
     display: flex;
     justify-content: center;
     position: relative;
     width: 100%;
     margin-top: 30px;
-    overflow:hidden ;
+   
 
     &__container{
         display: flex;
         flex-direction: column;
         gap:var(--gap);
+        padding-left: 20px;
 
         @media (min-width:var.$desktop){
             flex-direction: row;
@@ -37,7 +37,7 @@
     &__left{
         display: flex;
         flex-direction: column;
-        gap: $double-gap;
+        gap: var(--double-gap);
 
         p,
         a{

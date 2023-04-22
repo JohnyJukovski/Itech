@@ -83,8 +83,8 @@ footer {
   position: absolute;
   top: -169px;
   background-color: var(--white-color);
-  left: -3px;
-  right: -3px;
+  left: -7px;
+  right: -7px;
   height: 269px;
   @include mixins.background-image("assets/images/footer_wave.png");
   z-index: -1;

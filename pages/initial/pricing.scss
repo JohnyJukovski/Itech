@@ -1,0 +1,78 @@
+@use "../../styles/variables.scss" as var;
+@use "../../styles/mixins.scss" as mixins;
+
+.pricing{
+    background-color: var(--white-color);
+    padding-top: var(--double-gap);
+    width: 100%;
+    
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap);
+    }
+
+    &__heading{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        img{
+            height: 25px;
+        }
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+
+        @media (min-width:var.$bigger-tablet) {
+            flex-direction: row;
+            gap: 0;
+        }
+    }
+
+    &__left,
+    &__right{
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        border: 1px solid var(--grey-color);
+        padding: var(--double-gap);
+        border-radius: var(--gap);
+    }
+    a{
+        align-self: flex-start;
+    }
+
+    &__left{
+        @media (min-width:var.$bigger-tablet) {
+            border-right: none;
+
+            border-top-right-radius:0;
+            border-bottom-right-radius: 0;
+        }
+    }
+    &__right{
+        @media (min-width:var.$bigger-tablet) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+    &__benefits{
+        border-top: 1px solid var(--grey-color);   
+        padding-top: var(--gap);
+
+        svg{
+            fill: var(--white-color);
+        }
+
+        .notero__benefit div{
+            background-color: var(--violett-color);
+        }
+    }
+    &__disabled{
+        opacity: 0.2;
+    }
+}

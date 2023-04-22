@@ -3,11 +3,10 @@
 
 
 .one-app{
-  $double-gap:calc(var(--gap)*2);
-  margin-top: $double-gap;
+  margin-top: var(--double-gap);
  position: relative;
  padding-bottom: 100px;
- overflow:hidden;
+
 
   &__animation{
     @include localMixins.rotate-center($image:"../../assets/images/initial/one-app-bubble.png");
@@ -32,8 +31,8 @@
     &__left{
       display: flex;
       flex-direction: column;
-      gap: $double-gap;
-      margin-bottom: $double-gap;
+      gap: var(--double-gap);
+      margin-bottom:var(--double-gap);;
       p{
         align-self: flex-start;
       }
@@ -49,7 +48,7 @@
     &__buttons{
       display: flex;
       align-items: center;
-      gap: $double-gap;
+      gap: var(--double-gap);
     }
  
     br{
@@ -63,8 +62,8 @@
 
     &__infos{
       display: flex;
-      gap: $double-gap;
-      margin-top: $double-gap;
+      gap: var(--double-gap);
+      margin-top: var(--double-gap);
       text-transform: uppercase;
     }
 
