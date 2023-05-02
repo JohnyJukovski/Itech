@@ -1,6 +1,8 @@
 @use "variables" as var;
 @use "styles/mixins" as mixins;
 
+
+  
 .top-banner{
     width: 100%;
    min-height: 45px;
@@ -33,9 +35,18 @@ justify-content: center;
 }
 
 }
-
+.header_fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+  
+    z-index: 999;
+  }
+  
 header{
-
+    
  ul{
    column-gap: var(--gap);
     flex-wrap: wrap;
